@@ -1,7 +1,8 @@
-import React, {useEffect,useState} from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+// import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min.js";
 export default function Header() {
-
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -21,11 +22,13 @@ export default function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  
 
   return (
     <header>
-      <nav className={`navbar navbar-expand-lg ${hasScrolled ? "navShadow" : ""}`} id="navbar">
+      <nav
+        className={`navbar navbar-expand-lg ${hasScrolled ? "navShadow" : ""}`}
+        id="navbar"
+      >
         <div className="container-fluid nav-container">
           <div className="container-fluid nav-container">
             <a className="navbar-brand" href="/">
@@ -51,17 +54,27 @@ export default function Header() {
             <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0 nav-ul">
                 <li className="nav-item">
-                  <button className="nav-link" onClick={() => scrollToSection("services")}>
+                  <button
+                    className="nav-link"
+                    onClick={() => scrollToSection("services")}
+                  >
                     SERVICES
                   </button>
                 </li>
                 <li className="nav-item">
-                <button className="nav-link" onClick={() => scrollToSection("howitworks")}>
+                  <button
+                    className="nav-link"
+                    onClick={() => scrollToSection("howitworks")}
+                  >
                     ABOUT
                   </button>
                 </li>
                 <li className="nav-item">
-                <button className="nav-link" aria-current="page" onClick={() => scrollToSection("project")} >
+                  <button
+                    className="nav-link"
+                    aria-current="page"
+                    onClick={() => scrollToSection("project")}
+                  >
                     WORK
                   </button>
                 </li>
@@ -76,7 +89,10 @@ export default function Header() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                <button className="getStartBtn" onClick={() => scrollToSection("contact")} >
+                  <button
+                    className="getStartBtn"
+                    onClick={() => scrollToSection("contact")}
+                  >
                     GET STARTED
                   </button>
                 </li>
